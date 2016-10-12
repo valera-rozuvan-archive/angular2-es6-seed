@@ -118,3 +118,18 @@ This POC was inspired by
 [Angular 2 + ES6 + SASS](https://github.com/select/Angular2-ES6-Babel-Browserify-Starter)
 project. That project is quite old - it uses the beta Angular 2 sources. Also
 that project doesn't work right now.
+
+## Similar projects
+
+- [evanplaice/angular2-es6-seed](https://github.com/evanplaice/angular2-es6-seed)
+- [tolyo/ng2-brunch-es6-seed](https://github.com/tolyo/ng2-brunch-es6-seed)
+- [willyelm/angular2-es6-seed](https://github.com/willyelm/angular2-es6-seed)
+
+## Useful resources
+
+- [AngularClass/awesome-angular2](https://github.com/AngularClass/awesome-angular2)
+
+## License
+
+This project is licensed under the MIT license. Please [LICENSE](LICENSE) file
+for more information.
