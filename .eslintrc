@@ -1,0 +1,27 @@
+{
+  "rules": {
+    "indent": [2, 2 ], // indent with 2 spaces
+    "quotes": [2, "single"], // always use single quotes
+    "linebreak-style": [2, "unix"], // fuck windows
+    "semi": [2, "always"], // always use semicolons at end of command
+    "no-multiple-empty-lines": [2, {"max": 1}], // only allow one free line
+    "eqeqeq": [2, "smart"], // always use === only if null or something not ... I forgot
+    "strict": [2, "function"],
+    "no-var": [2],
+    "new-cap": [0]
+  },
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "globals": {
+    "document": true,
+    "window": true,
+    "require": true
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "extends": "google",
+  "parser": "babel-eslint" // we need to use this since ESLint does not support ES6 Decorators
+}
