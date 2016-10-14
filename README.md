@@ -5,19 +5,21 @@ Sixth Edition of JavaScript, known as ES6 or ECMAScript 2015). The project uses
 (among other things):
 
 - [ES6](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf) +
-[Babel](https://github.com/babel/babel)
-- [Angular 2 (v2.0.1)](https://github.com/angular/angular)
+[Babel (v6.x)](https://github.com/babel/babel) +
+[Babel Legacy Decorator plugin](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
+- [Angular2 (v2.1.0)](https://github.com/angular/angular)
 - [Browserify](https://github.com/substack/node-browserify) +
 [Babelify](https://github.com/babel/babelify)
 - [SASS](http://sass-lang.com/)
 - [Karma](https://github.com/karma-runner/karma)
 - [Jasmine](https://github.com/jasmine/jasmine)
-- [Gulp (v2)](https://github.com/gulpjs/gulp)
-- [ESLint](https://github.com/eslint/eslint)
+- [Gulp (v3.9.1)](https://github.com/gulpjs/gulp)
+- [ESLint](https://github.com/eslint/eslint) +
+[config for Google style](https://github.com/google/eslint-config-google)
 
 ## Prerequisites
 
-- Node.js v6.7.0 [https://nodejs.org/en/](https://nodejs.org/en/)
+- Node.js v6.8.0 [https://nodejs.org/en/](https://nodejs.org/en/)
 
 ## Initial setup
 
@@ -32,7 +34,8 @@ npm install
 
 All JavaScript dependencies of the project are specified in the file
 `package.json` in the root folder. If this file is updated (new dependency is
-added, or something is removed), you have to run the command:
+added, something is removed, or something is updated), you have to run the
+command:
 
 ```
 npm install
@@ -53,7 +56,7 @@ to run the command:
 gulp dist
 ```
 
-### Simple HTTP server
+### Simple HTTP server (with LiveReload)
 
 To run a simple HTTP server (that will serve the built static site, contained
 in folder `dist`), in a separate console window run:
@@ -61,6 +64,9 @@ in folder `dist`), in a separate console window run:
 ```
 gulp start
 ```
+
+This simple server will automatically reload the browser if something changes
+in the `dist` folder.
 
 ### Ease of development
 
@@ -70,6 +76,11 @@ console window run:
 ```
 gulp watch
 ```
+
+If the watcher is running, and you change some code, the project will be
+rebuilt, `dist` folder will be updated, and the browser will be automatically
+reloaded. This, if you have `watch` and `start` gulp tasks running in parallel,
+development of the application becomes a breathe.
 
 ### JavaScript unit tests
 
@@ -100,8 +111,11 @@ in a separate console window run:
 gulp coverage
 ```
 
+Upon completion, this command will output in the console coverage statistics,
+and will generate a folder `coverage` with nicely formated HTML coverage report.
+
 NOTE: Make sure that the simple HTTP server is running and is serving the
-application.
+application when you run the gulp coverage command.
 
 ### Linting JS code
 
@@ -114,10 +128,10 @@ gulp lint
 
 ## Influences
 
-This POC was inspired by
-[Angular 2 + ES6 + SASS](https://github.com/select/Angular2-ES6-Babel-Browserify-Starter)
+This seed project was inspired by
+[select/Angular2-ES6-Babel-Browserify-Starter](https://github.com/select/Angular2-ES6-Babel-Browserify-Starter)
 project. That project is quite old - it uses the beta Angular 2 sources. Also
-that project doesn't work right now.
+that project doesn't work out-of-the-box right now.
 
 ## Similar projects
 

@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const gulp = require('gulp');
 const minimist = require('minimist');
@@ -15,12 +13,13 @@ gulp.task('test', _testGulpTask);
 
 return;
 
-
 /*
  * Private functions follow below.
  **/
 
-
+/**
+ * Initiate default options to this task.
+ */
 function _initiateOptions() {
   knownOptions = {
     default: {
@@ -32,6 +31,9 @@ function _initiateOptions() {
   options = minimist(process.argv.slice(2), knownOptions);
 }
 
+/**
+ * Validate options passed on the command line.
+ */
 function _validateOptions() {
   // --browser option
   //
@@ -41,15 +43,15 @@ function _validateOptions() {
     let lcBrowserStr = options.browser.toLowerCase();
 
     switch (lcBrowserStr) {
-      case 'chrome':
-        options.browser = 'Chrome';
-        break;
-      case 'phantomjs':
-        options.browser = 'PhantomJS';
-        break;
-      default:
-        options.browser = 'PhantomJS';
-        break;
+    case 'chrome':
+      options.browser = 'Chrome';
+      break;
+    case 'phantomjs':
+      options.browser = 'PhantomJS';
+      break;
+    default:
+      options.browser = 'PhantomJS';
+      break;
     }
   } else {
     options.browser = 'PhantomJS';
@@ -64,28 +66,33 @@ function _validateOptions() {
     let lcOnceStr = options.once.toLowerCase();
 
     switch (lcOnceStr) {
-      case 'true':
-        options.once = true;
-        break;
-      case 'false':
-        options.once = false;
-        break;
-      default:
-        options.once = false;
-        break;
+    case 'true':
+      options.once = true;
+      break;
+    case 'false':
+      options.once = false;
+      break;
+    default:
+      options.once = false;
+      break;
     }
   } else if (typeof options.once !== 'boolean') {
     options.once = false;
   }
 }
 
+/**
+ * Test Gulp task function.
+ *
+ * @param {Function} cb - Callback function
+ */
 function _testGulpTask(cb) {
   const karmaConfig = {
     configFile: path.join(__dirname, '..', 'karma.conf.js'),
     browsers: [options.browser],
     singleRun: options.once
   };
-  const karmaServerExitF = function (exitCode) {
+  const karmaServerExitF = exitCode => {
     console.log('Karma has exited with ' + exitCode);
     cb();
   };

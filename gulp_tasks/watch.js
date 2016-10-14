@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
 const source = require('vinyl-source-stream');
@@ -15,13 +13,15 @@ gulp.task('watch', _watchTask);
 
 return;
 
-
 /*
  * Private functions follow below.
  **/
 
-
-// Create a new bundle.
+/**
+ * Create a new bundle.
+ *
+ * @param {Object} bundler - The watchify bundler object.
+ */
 function _rebundle(bundler) {
   let rebundleTimer = duration('rebundle time');
   bundler.bundle()
@@ -35,14 +35,18 @@ function _rebundle(bundler) {
     .pipe(sourcemaps.write('./'))
     .pipe(rebundleTimer)
     .pipe(gulp.dest('dist/js'))
-    .on('end', function () {
+    .on('end', () => {
       console.log('   ---> done! Watching ...');
-    })
+    });
 }
 
-// Watch JS files, on change convert ES6 to ES5 and bundle them.
+/**
+ * Watch JS files, on change convert ES6 to ES5 and bundle them.
+ */
 function _compileJs() {
-  let bundler = watchify(browserify('./src/boot.js', { paths: ['./node_modules','./src'] })
+  let bundler = watchify(
+      browserify('./src/boot.js', {paths: ['./node_modules', './src']}
+    )
     .transform(babelify.configure({
       presets: ['es2015'], // Use all of the ES2015 spec.
       plugins: ['transform-decorators-legacy']
@@ -58,21 +62,31 @@ function _compileJs() {
   _rebundle(bundler);
 }
 
-// Sync HTML files.
-// http://blog.andrewray.me/how-to-copy-only-changed-files-with-gulp/
+/**
+ * Sync HTML files.
+ * http://blog.andrewray.me/how-to-copy-only-changed-files-with-gulp/
+ *
+ * @param {string} base - Base path
+ * @param {string} src  - Source path
+ * @param {string} trgt - Target path
+ */
 function _sync(base, src, trgt) {
   gulp.src(base + src, {
-      base: base
-    })
-    .pipe(watch(base + src, {
-      base: base,
-      verbose: true
-    }))
-    .pipe(gulp.dest(trgt));
+    base: base
+  })
+  .pipe(watch(base + src, {
+    base: base,
+    verbose: true
+  }))
+  .pipe(gulp.dest(trgt));
 }
 
-// This is the watch task that watches all file changes and runs task so we
-// immediately have the "dist" folder updated.
+/**
+ * This is the watch task that watches all file changes and runs task so we
+ * immediately have the "dist" folder updated.
+ *
+ * @param {Function} cb - Callback function
+ */
 function _watchTask(cb) {
   // Watch changes in SASS files and create CSS. Sync CSS to "dist" folder.
   gulp.watch('./src/sass/**/*.sass', ['sass']);

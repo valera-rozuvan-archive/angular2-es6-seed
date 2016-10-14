@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const watchify = require('watchify');
 const babelify = require('babelify');
@@ -16,14 +14,19 @@ gulp.task('dist', ['sass', 'compile-js-once', 'copy-html-to-dist']);
 
 return;
 
-
 /*
  * Private functions follow below.
  **/
 
-
+/**
+ * Compile JS files once and exit.
+ *
+ * @param {Function} cb - Callback function
+ */
 function _compileJsOnceTask(cb) {
-  let bundler = watchify(browserify('./src/boot.js', { paths: ['./node_modules','./src'] })
+  let bundler = watchify(
+      browserify('./src/boot.js', {paths: ['./node_modules', './src']}
+    )
     .transform(babelify.configure({
       presets: ['es2015'], // Use all of the ES2015 spec.
       plugins: ['transform-decorators-legacy']
@@ -39,11 +42,16 @@ function _compileJsOnceTask(cb) {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('dist/js'))
     .on('end', function() {
-        bundler.close();
-        cb();
+      bundler.close();
+      cb();
     });
 }
 
+/**
+ * Copy all HTML source files to `dist` folder.
+ *
+ * @param {Function} cb - Callback function
+ */
 function _copyHtmlToDist(cb) {
   const base = './src';
   const src = '/**/*.html';
@@ -53,7 +61,7 @@ function _copyHtmlToDist(cb) {
     base: base
   })
   .pipe(gulp.dest(trgt))
-  .on('end', function () {
+  .on('end', () => {
     cb();
   });
 }

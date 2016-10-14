@@ -1,7 +1,9 @@
+/* global describe, beforeEach, it, expect */
+
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 
-import { InitCapsPipe } from 'utils/init-caps-pipe.js';
+import {InitCapsPipe} from 'utils/init-caps-pipe.js';
 
 describe('InitCapsPipe', () => {
   let pipe = InitCapsPipe;
@@ -25,7 +27,7 @@ describe('InitCapsPipe', () => {
 
 describe('InitCapsPipe non constructor invocation', () => {
   it('fails when InitCapsPipe is called as a function', () => {
-    expect(function () {
+    expect(() => {
       InitCapsPipe();
     }).toThrow(new Error('Cannot call a class as a function'));
   });
