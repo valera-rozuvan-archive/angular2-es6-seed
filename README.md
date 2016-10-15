@@ -101,7 +101,10 @@ gulp test --browser chrome --once
 ...
 ```
 
-NOTE: The order of parameters to `gulp test` does not matter.
+The order of parameters to `gulp test` does not matter.
+
+NOTE: Make sure that the simple HTTP server is running and is serving the
+application when you run the gulp test command.
 
 ### Coverage
 
