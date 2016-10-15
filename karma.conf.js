@@ -23,11 +23,6 @@ module.exports = function(config) {
       'test/**/*.spec.js'
     ],
 
-    proxies: {
-      '/index.html': 'http://localhost:8080/index.html',
-      '/components/dashboard/dashboard.html': 'http://localhost:8080/components/dashboard/dashboard.html'
-    },
-
     // list of files to exclude
     exclude: [],
 

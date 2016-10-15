@@ -103,9 +103,6 @@ gulp test --browser chrome --once
 
 The order of parameters to `gulp test` does not matter.
 
-NOTE: Make sure that the simple HTTP server is running and is serving the
-application when you run the gulp test command.
-
 ### Coverage
 
 To gather coverage status (percent of JavaScript code covered by JS unit tests),
@@ -117,9 +114,6 @@ gulp coverage
 
 Upon completion, this command will output in the console coverage statistics,
 and will generate a folder `coverage` with nicely formated HTML coverage report.
-
-NOTE: Make sure that the simple HTTP server is running and is serving the
-application when you run the gulp coverage command.
 
 ### Linting JS code
 
