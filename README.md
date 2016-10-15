@@ -1,7 +1,10 @@
 # Angular2 ES6 seed
+
 [![Build Status](https://travis-ci.org/valera-rozuvan/angular2-es6-seed.svg?branch=master)](https://travis-ci.org/valera-rozuvan/angular2-es6-seed)
 [![Dependency Status](https://david-dm.org/valera-rozuvan/angular2-es6-seed.svg)](https://david-dm.org/valera-rozuvan/angular2-es6-seed)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/valera-rozuvan/angular2-es6-seed/blob/master/LICENSE)
+
+[![NPM](https://nodei.co/npm/angular2-es6-seed.png)](https://nodei.co/npm/angular2-es6-seed/)
 
 A simple seed project to demonstrate bootstrapping of Angular2 using ES6 (The
 Sixth Edition of JavaScript, known as ES6 or ECMAScript 2015). The project uses
