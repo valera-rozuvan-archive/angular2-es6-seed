@@ -5,6 +5,10 @@
   "main": "index.js",
   "author": "Valera Rozuvan",
   "homepage": "https://github.com/valera-rozuvan/angular2-es6-seed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valera-rozuvan/angular2-es6-seed.git"
+  },  
   "license": "MIT",
   "private": false,
   "devDependencies": {
