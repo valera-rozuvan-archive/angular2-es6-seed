@@ -20,3 +20,11 @@ describe('DashboardComponent', () => {
     expect(dashboardComponent.message).toEqual('hello world');
   });
 });
+
+describe('DashboardComponent non constructor invocation', () => {
+  it('fails when DashboardComponent is called as a function', () => {
+    expect(() => {
+      DashboardComponent();
+    }).toThrow(new Error('Cannot call a class as a function'));
+  });
+});

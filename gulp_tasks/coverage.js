@@ -70,13 +70,6 @@ function _coverageGulpTask(cb) {
     singleRun: true,
     reporters: ['progress', 'coverage'],
     coverageReporter: {
-      instrumenters: {isparta: require('isparta')},
-      instrumenter: {
-        'test/**/*.js': 'isparta'
-      },
-      instrumenterOptions: {
-        istanbul: {noCompact: true}
-      },
       reporters: [
         {
           type: 'text-summary'
@@ -89,6 +82,7 @@ function _coverageGulpTask(cb) {
     },
     preprocessors: {
       'node_modules/core-js/shim.js': ['browserify'],
+      'src/**/*.js': ['browserify', 'coverage'],
       'test/**/*.spec.js': ['browserify']
     },
     browserify: {
