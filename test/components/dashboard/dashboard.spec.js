@@ -1,10 +1,12 @@
+/* global describe, beforeEach, it, expect */
+
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
 
-import { DashboardComponent } from 'components/dashboard/dashboard.js';
+import {DashboardComponent} from 'components/dashboard/dashboard.js';
 
 describe('DashboardComponent', () => {
-  let dashboardComponent = null
+  let dashboardComponent = null;
 
   beforeEach(() => {
     dashboardComponent = new DashboardComponent();

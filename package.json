@@ -1,6 +1,6 @@
 {
   "name": "angular2-es6-seed",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular2 ES6 seed",
   "main": "index.js",
   "author": "Valera Rozuvan",
@@ -19,7 +19,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-copy": "^0.0.2",
-    "gulp-connect": "^3.2.2",
+    "gulp-connect": "^5.0.0",
     "karma-coverage": "^1.1.1",
     "gulp-duration": "^0.0.0",
     "gulp-eslint": "^3.0.1",
@@ -28,7 +28,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sourcemaps": "^2.1.1",
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "gulp-watch": "^4.3.10",
@@ -51,17 +51,17 @@
     "watchify": "^3.7.0"
   },
   "dependencies": {
-    "@angular/common": "^2.0.1",
-    "@angular/compiler": "^2.0.1",
-    "@angular/core": "^2.0.1",
-    "@angular/forms": "^2.0.1",
-    "@angular/http": "^2.0.1",
-    "@angular/platform-browser": "^2.0.1",
-    "@angular/platform-browser-dynamic": "^2.0.1",
-    "@angular/router": "^3.0.1",
+    "@angular/common": "^2.1.0",
+    "@angular/compiler": "^2.1.0",
+    "@angular/core": "^2.1.0",
+    "@angular/forms": "^2.1.0",
+    "@angular/http": "^2.1.0",
+    "@angular/platform-browser": "^2.1.0",
+    "@angular/platform-browser-dynamic": "^2.1.0",
+    "@angular/router": "^3.1.0",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.8",
-    "rxjs": "^5.0.0-beta.12",
+    "rxjs": "^5.0.0-rc.1",
     "zone.js": "^0.6.25"
   }
 }

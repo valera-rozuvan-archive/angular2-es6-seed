@@ -1,5 +1,3 @@
-'use strict';
-
 const path = require('path');
 const gulp = require('gulp');
 const minimist = require('minimist');
@@ -15,12 +13,13 @@ gulp.task('coverage', _coverageGulpTask);
 
 return;
 
-
 /*
  * Private functions follow below.
  **/
 
-
+/**
+ * Initiate default options to this task.
+ */
 function _initiateOptions() {
   knownOptions = {
     default: {
@@ -31,6 +30,9 @@ function _initiateOptions() {
   options = minimist(process.argv.slice(2), knownOptions);
 }
 
+/**
+ * Validate options passed on the command line.
+ */
 function _validateOptions() {
   // --browser option
   //
@@ -40,21 +42,26 @@ function _validateOptions() {
     let lcBrowserStr = options.browser.toLowerCase();
 
     switch (lcBrowserStr) {
-      case 'chrome':
-        options.browser = 'Chrome';
-        break;
-      case 'phantomjs':
-        options.browser = 'PhantomJS';
-        break;
-      default:
-        options.browser = 'PhantomJS';
-        break;
+    case 'chrome':
+      options.browser = 'Chrome';
+      break;
+    case 'phantomjs':
+      options.browser = 'PhantomJS';
+      break;
+    default:
+      options.browser = 'PhantomJS';
+      break;
     }
   } else {
     options.browser = 'PhantomJS';
   }
 }
 
+/**
+ * Coverage Gulp task function.
+ *
+ * @param {Function} cb - Callback function
+ */
 function _coverageGulpTask(cb) {
   const karmaConfig = {
     configFile: path.join(__dirname, '..', 'karma.conf.js'),
@@ -63,21 +70,21 @@ function _coverageGulpTask(cb) {
     singleRun: true,
     reporters: ['progress', 'coverage'],
     coverageReporter: {
-      instrumenters: { isparta : require('isparta') },
+      instrumenters: {isparta: require('isparta')},
       instrumenter: {
         'test/**/*.js': 'isparta'
       },
       instrumenterOptions: {
-        istanbul: { noCompact: true }
+        istanbul: {noCompact: true}
       },
       reporters: [
-          {
-              type: 'text-summary',
-          },
-          {
-              type: 'html',
-              dir: 'coverage/',
-          }
+        {
+          type: 'text-summary'
+        },
+        {
+          type: 'html',
+          dir: 'coverage/'
+        }
       ]
     },
     preprocessors: {
@@ -86,7 +93,7 @@ function _coverageGulpTask(cb) {
     },
     browserify: {
       debug: true,
-      paths: ['./node_modules','./src'],
+      paths: ['./node_modules', './src'],
       transform: [
         [
           'babelify',
@@ -106,7 +113,7 @@ function _coverageGulpTask(cb) {
       ]
     }
   };
-  const karmaServerExitF = function (exitCode) {
+  const karmaServerExitF = exitCode => {
     console.log('Karma has exited with ' + exitCode);
     cb();
   };

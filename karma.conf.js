@@ -39,7 +39,7 @@ module.exports = function(config) {
     },
     browserify: {
       debug: true,
-      paths: ['./node_modules','./src'],
+      paths: ['./node_modules', './src'],
       transform: [
         ['babelify', {
           presets: ['es2015'],

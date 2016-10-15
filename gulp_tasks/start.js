@@ -1,5 +1,3 @@
-'use strict';
-
 const gulp = require('gulp');
 const connect = require('gulp-connect');
 
@@ -11,12 +9,13 @@ gulp.task('start', ['start-connect', 'watch-dist']);
 
 return;
 
-
 /*
  * Private functions follow below.
  **/
 
-
+/**
+ * Start simple HTTP server.
+ */
 function _startConnectTask() {
   connect.server({
     root: './dist',
@@ -24,11 +23,18 @@ function _startConnectTask() {
   });
 }
 
+/**
+ * Reload the simple HTTP server with contents from `dist` folder.
+ */
 function _filesDistTask() {
   gulp.src('./dist/**/*')
     .pipe(connect.reload());
 }
 
+/**
+ * Watch `dist` directory. If something changes, call the task to reload the
+ * server.
+ */
 function _watchDistTask() {
   gulp.watch(['./dist/**/*'], ['files-dist']);
 }
