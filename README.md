@@ -1,4 +1,5 @@
 # Angular2 ES6 seed
+[![Build Status](https://travis-ci.org/valera-rozuvan/angular2-es6-seed.svg?branch=master)](https://travis-ci.org/valera-rozuvan/angular2-es6-seed)
 [![Dependency Status](https://david-dm.org/valera-rozuvan/angular2-es6-seed.svg)](https://david-dm.org/valera-rozuvan/angular2-es6-seed)
 
 A simple seed project to demonstrate bootstrapping of Angular2 using ES6 (The
