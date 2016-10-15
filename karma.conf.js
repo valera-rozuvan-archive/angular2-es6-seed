@@ -37,8 +37,7 @@ module.exports = function(config) {
       paths: ['./node_modules', './src'],
       transform: [
         ['babelify', {
-          presets: ['es2015'],
-          plugins: ['transform-decorators-legacy']
+          presets: ['es2015']
         }]
       ]
     },

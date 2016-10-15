@@ -1,11 +1,16 @@
 import {Component} from '@angular/core';
 
-@Component({
-  selector: 'app',
-  templateUrl: 'components/dashboard/dashboard.html'
-})
-export class DashboardComponent {
+class DashboardComponent {
   constructor() {
     this.message = 'hello world';
   }
 }
+
+DashboardComponent.annotations = [
+  new Component({
+    selector: 'app',
+    templateUrl: 'components/dashboard/dashboard.html'
+  })
+];
+
+export {DashboardComponent};

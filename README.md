@@ -8,8 +8,7 @@ Sixth Edition of JavaScript, known as ES6 or ECMAScript 2015). The project uses
 (among other things):
 
 - [ES6](http://www.ecma-international.org/ecma-262/6.0/ECMA-262.pdf) +
-[Babel (v6.x)](https://github.com/babel/babel) +
-[Babel Legacy Decorator plugin](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
+[Babel (v6.x)](https://github.com/babel/babel)
 - [Angular2 (v2.1.0)](https://github.com/angular/angular)
 - [Browserify](https://github.com/substack/node-browserify) +
 [Babelify](https://github.com/babel/babelify)

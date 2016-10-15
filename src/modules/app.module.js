@@ -3,12 +3,14 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DashboardComponent} from 'components/dashboard/dashboard';
 import {InitCapsPipe} from 'utils/init-caps-pipe.js';
 
-@NgModule({
-  imports: [
-    BrowserModule
-  ],
-  declarations: [DashboardComponent, InitCapsPipe],
-  bootstrap: [DashboardComponent]
-})
+class AppModule {}
 
-export class AppModule {}
+AppModule.annotations = [
+  new NgModule({
+    imports: [BrowserModule],
+    declarations: [DashboardComponent, InitCapsPipe],
+    bootstrap: [DashboardComponent]
+  })
+];
+
+export {AppModule};

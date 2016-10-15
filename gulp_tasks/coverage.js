@@ -92,8 +92,7 @@ function _coverageGulpTask(cb) {
         [
           'babelify',
           {
-            presets: ['es2015'],
-            plugins: ['transform-decorators-legacy']
+            presets: ['es2015']
           }
         ],
         [
