@@ -80,9 +80,9 @@ gulp watch
 ```
 
 If the watcher is running, and you change some code, the project will be
-rebuilt, `dist` folder will be updated, and the browser will be automatically
-reloaded. This, if you have `watch` and `start` gulp tasks running in parallel,
-development of the application becomes a breathe.
+rebuilt, `dist` folder will be updated. Thus, if you have `watch` and `start`
+gulp tasks running in parallel, development of the application becomes a
+breathe.
 
 ### JavaScript unit tests
 
@@ -137,6 +137,7 @@ that project doesn't work out-of-the-box right now.
 - [evanplaice/angular2-es6-seed](https://github.com/evanplaice/angular2-es6-seed)
 - [tolyo/ng2-brunch-es6-seed](https://github.com/tolyo/ng2-brunch-es6-seed)
 - [willyelm/angular2-es6-seed](https://github.com/willyelm/angular2-es6-seed)
+- [blacksonic/angular2-babel-esnext-starter](https://github.com/blacksonic/angular2-babel-esnext-starter)
 
 ## Useful resources
 
