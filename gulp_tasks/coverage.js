@@ -80,29 +80,16 @@ function _coverageGulpTask(cb) {
         }
       ]
     },
-    preprocessors: {
-      'node_modules/core-js/shim.js': ['browserify'],
-      'src/**/*.js': ['browserify', 'coverage'],
-      'test/**/*.spec.js': ['browserify']
-    },
     browserify: {
-      debug: true,
-      paths: ['./node_modules', './src'],
       transform: [
         [
           'babelify',
           {
-            presets: ['es2015']
+            presets: ['es2015'],
+            plugins: ['istanbul']
           }
         ],
-        [
-          'browserify-istanbul',
-          {
-            instrumenterConfig: {
-              embedSource: true
-            }
-          }
-        ]
+        'browserify-istanbul'
       ]
     }
   };
