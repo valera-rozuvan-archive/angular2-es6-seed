@@ -6,7 +6,7 @@
   "author": "Valera Rozuvan",
   "homepage": "https://github.com/valera-rozuvan/angular2-es6-seed",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "babel-eslint": "^7.0.0",
     "babel-preset-es2015": "^6.16.0",
