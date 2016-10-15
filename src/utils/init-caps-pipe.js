@@ -1,10 +1,17 @@
 import {Pipe} from '@angular/core';
 
-@Pipe({name: 'initCaps'})
-export class InitCapsPipe {
+class InitCapsPipe {
   transform(value) {
     return value.toLowerCase().replace(
       /(?:^|\s)[a-z]/g, m => m.toUpperCase()
     );
   }
 }
+
+InitCapsPipe.annotations = [
+  new Pipe({
+    name: 'initCaps'
+  })
+];
+
+export {InitCapsPipe};

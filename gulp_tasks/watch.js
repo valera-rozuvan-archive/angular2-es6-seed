@@ -48,8 +48,7 @@ function _compileJs() {
       browserify('./src/boot.js', {paths: ['./node_modules', './src']}
     )
     .transform(babelify.configure({
-      presets: ['es2015'], // Use all of the ES2015 spec.
-      plugins: ['transform-decorators-legacy']
+      presets: ['es2015'] // Use all of the ES2015 spec.
     })));
 
   // Restart the bundling process on file changes.
