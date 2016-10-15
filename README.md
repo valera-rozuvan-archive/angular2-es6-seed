@@ -16,15 +16,15 @@ Sixth Edition of JavaScript, known as ES6 or ECMAScript 2015). The project uses
 - [Browserify](https://github.com/substack/node-browserify) +
 [Babelify](https://github.com/babel/babelify)
 - [SASS](http://sass-lang.com/)
-- [Karma](https://github.com/karma-runner/karma)
-- [Jasmine](https://github.com/jasmine/jasmine)
+- [Karma](https://github.com/karma-runner/karma) +
+[Jasmine](https://github.com/jasmine/jasmine)
 - [Gulp (v3.9.1)](https://github.com/gulpjs/gulp)
 - [ESLint](https://github.com/eslint/eslint) +
 [config for Google style](https://github.com/google/eslint-config-google)
 
 ## Prerequisites
 
-- Node.js v6.8.0 [https://nodejs.org/en/](https://nodejs.org/en/)
+- Node.js v6.x [https://nodejs.org/en/](https://nodejs.org/en/)
 
 ## Initial setup
 
