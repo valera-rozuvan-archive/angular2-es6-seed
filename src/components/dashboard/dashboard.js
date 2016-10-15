@@ -9,7 +9,8 @@ class DashboardComponent {
 DashboardComponent.annotations = [
   new Component({
     selector: 'app',
-    templateUrl: 'components/dashboard/dashboard.html'
+    templateUrl: 'components/dashboard/dashboard.html',
+    styleUrls: ['css/dashboard.component.css']
   })
 ];
 

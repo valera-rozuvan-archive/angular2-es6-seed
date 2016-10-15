@@ -88,7 +88,7 @@ function _sync(base, src, trgt) {
  */
 function _watchTask(cb) {
   // Watch changes in SASS files and create CSS. Sync CSS to "dist" folder.
-  gulp.watch('./src/sass/**/*.sass', ['sass']);
+  gulp.watch('./src/**/*.sass', ['sass']);
 
   // Watch changes in HTML template file and sync them to the "dist" folder.
   _sync('./src', '/**/*.html', 'dist');
