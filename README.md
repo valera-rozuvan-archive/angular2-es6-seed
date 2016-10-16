@@ -128,19 +128,23 @@ command:
 gulp lint
 ```
 
-## Influences
-
-This seed project was inspired by
-[select/Angular2-ES6-Babel-Browserify-Starter](https://github.com/select/Angular2-ES6-Babel-Browserify-Starter)
-project. That project is quite old - it uses the beta Angular 2 sources. Also
-that project doesn't work out-of-the-box right now.
+All JavaScript files in this project fall under the eye of ESLint.
 
 ## Similar projects
 
+The following projects aim to bridge the gap between Angular2 and ES6/ES7/ES.Next
+using 3rd party Babel plugins
+[babel-plugin-transform-decorators-legacy](https://github.com/loganfsmyth/babel-plugin-transform-decorators-legacy)
+or
+[babel-preset-angular2](https://github.com/shuhei/babel-preset-angular2):
+
+- [select/Angular2-ES6-Babel-Browserify-Starter](https://github.com/select/Angular2-ES6-Babel-Browserify-Starter)
 - [evanplaice/angular2-es6-seed](https://github.com/evanplaice/angular2-es6-seed)
 - [tolyo/ng2-brunch-es6-seed](https://github.com/tolyo/ng2-brunch-es6-seed)
 - [willyelm/angular2-es6-seed](https://github.com/willyelm/angular2-es6-seed)
 - [blacksonic/angular2-babel-esnext-starter](https://github.com/blacksonic/angular2-babel-esnext-starter)
+- [blacksonic/angular2-esnext-todomvc](https://github.com/blacksonic/angular2-esnext-todomvc)
+- [shuhei/babel-angular2-app](https://github.com/shuhei/babel-angular2-app)
 
 ## Useful resources
 
