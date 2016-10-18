@@ -152,5 +152,5 @@ or
 
 ## License
 
-This project is licensed under the MIT license. Please [LICENSE](LICENSE) file
+This project is licensed under the MIT license. Please see [LICENSE](LICENSE) file
 for more information.
