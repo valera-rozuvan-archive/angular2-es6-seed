@@ -1,3 +1,9 @@
+# DEPRECATED
+
+This project's purpose was to show how to use Angular v2.x purely with JavaScript (ES6). I.e. no TypeScript. Those days are long gone. Angular is far beyond version 2 these days, and TypeScript support has improved 10 fold. So leaving this here for historical purpose :) Repo is archived.
+
+----------------------------------------------------------------
+
 # Angular2 ES6 seed
 
 [![Build Status](https://travis-ci.org/valera-rozuvan/angular2-es6-seed.svg?branch=master)](https://travis-ci.org/valera-rozuvan/angular2-es6-seed)
